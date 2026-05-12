@@ -7,7 +7,7 @@ A SaaS-style Timesheet Management application built for the Tentwenty Frontend D
 ### 1. Clone and install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ticktock.git
+git clone https://github.com/zuhooruddin/ticktock.git
 cd ticktock
 npm install
 ```
@@ -131,6 +131,8 @@ Tests cover:
 
 ---
 
+
+---
 
 ## Time Spent
 

@@ -61,7 +61,7 @@ export function WeekDetail({ detail: initialDetail }: WeekDetailProps) {
       {/* ── Header ─────────────────────────────────────────────────── */}
       <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between mb-6">
         <div>
-          <h1 className="text-lg font-bold text-gray-900">This week's timesheet</h1>
+          <h1 className="text-lg font-bold text-gray-900">This week&apos;s timesheet</h1>
           <p className="text-xs text-gray-400 mt-1">{initialDetail.dateRange}</p>
         </div>
 
