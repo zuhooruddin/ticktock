@@ -80,7 +80,12 @@ export function getMockDays(timesheetId: number): TimesheetDay[] {
   return Array.from({ length: 5 }, (_, dayIdx) => {
     const date = offsetDate(ts.weekStart, dayIdx);
     const label = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-    const count = ts.status === 'missing' ? 0 : dayIdx < 4 ? 2 + (dayIdx % 2) : 0;
+    const count =
+      ts.status === 'missing'
+        ? 0
+        : ts.status === 'incomplete'
+        ? dayIdx < 2 ? 2 : dayIdx === 2 ? 1 : 0
+        : dayIdx < 4 ? 2 + (dayIdx % 2) : 0;
 
     const entries: TimesheetEntry[] = Array.from({ length: count }, (_, entryIdx) => ({
       id: timesheetId * 1000 + dayIdx * 10 + entryIdx,
